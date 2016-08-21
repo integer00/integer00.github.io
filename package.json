@@ -9,8 +9,10 @@
   "author": "integer",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^6.4.0",
     "grunt": "^1.0.1",
     "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-watch": "^1.0.0"
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-postcss": "^0.8.0"
   }
 }

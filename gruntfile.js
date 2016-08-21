@@ -17,6 +17,19 @@ module.exports = function(grunt) {
          },
                           
   },
+ postcss: {
+    options:{
+      map:true,
+      processors:[
+	      require('autoprefixer')({
+		      browsers:['last 2 versions']
+	      })
+	    ]
+	    },
+    dist:{
+		 src: 'css/*.css'
+			    }
+  },
 
  watch: {
     css: {
@@ -44,8 +57,10 @@ module.exports = function(grunt) {
 
 grunt.loadNpmTasks('grunt-contrib-sass');
 grunt.loadNpmTasks('grunt-contrib-watch');
+grunt.loadNpmTasks('grunt-postcss');
 
 grunt.registerTask('compile', ['sass:compile']);
+grunt.registerTask('prefix',['postcss:dist']);
 grunt.registerTask('default', ['watch']);
 
 
