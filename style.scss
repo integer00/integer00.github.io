@@ -363,6 +363,9 @@ box-shadow: 2px 16px 84px -1px rgba(0,0,0,0.44);
 }
 
 .about-us{
+*{
+	outline: 1px dashed black;
+}
 
 			.waffle{
 		width: 1106px; //1446
@@ -383,10 +386,16 @@ box-shadow: 2px 16px 84px -1px rgba(0,0,0,0.44);
 					overflow: hidden;
 
 				}
+				
+				.about-us__img{
+					width:47px;
+					height:47px;
+				}
+
 				.about-us__describe {
 					margin: 0;
 					margin-top: 13px;
-					margin-left: 12px;
+					margin-left: 10px;
 					color: #323232;
 					font-size: 16px;
 					font-weight: 400;
@@ -397,7 +406,7 @@ box-shadow: 2px 16px 84px -1px rgba(0,0,0,0.44);
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	.wrap{
+	.about-us__item{
 		padding-top: 12px;
 		display: inline-flex;
 		width: 540px;

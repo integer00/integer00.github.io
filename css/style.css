@@ -988,6 +988,9 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
+.about-us * {
+  outline: 1px dashed black;
+}
 .about-us .waffle {
   width: 1106px;
   height: 266px;
@@ -1005,10 +1008,14 @@ body {
   height: 61px;
   overflow: hidden;
 }
+.about-us .waffle .about-us__img {
+  width: 47px;
+  height: 47px;
+}
 .about-us .waffle .about-us__describe {
   margin: 0;
   margin-top: 13px;
-  margin-left: 12px;
+  margin-left: 10px;
   color: #323232;
   font-size: 16px;
   font-weight: 400;
@@ -1022,7 +1029,7 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.about-us .waffle .wrapper .wrap {
+.about-us .waffle .wrapper .about-us__item {
   padding-top: 12px;
   display: -ms-inline-flexbox;
   display: inline-flex;
