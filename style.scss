@@ -363,10 +363,6 @@ box-shadow: 2px 16px 84px -1px rgba(0,0,0,0.44);
 }
 
 .about-us{
-*{
-	outline: 1px dashed black;
-}
-
 			.waffle{
 		width: 1106px; //1446
 		height: 266px; //306
@@ -374,7 +370,7 @@ box-shadow: 2px 16px 84px -1px rgba(0,0,0,0.44);
 		margin-bottom: 40px;
 		border-radius: 15px;
 		
-				background: url(../img/waffle.png) center top;
+				background: url(../img/waffle.jpg) center top;
 
 			.about-us__heading{
 					margin: 0;
@@ -394,6 +390,7 @@ box-shadow: 2px 16px 84px -1px rgba(0,0,0,0.44);
 
 				.about-us__describe {
 					margin: 0;
+					width: 485px;
 					margin-top: 13px;
 					margin-left: 10px;
 					color: #323232;
@@ -415,13 +412,6 @@ box-shadow: 2px 16px 84px -1px rgba(0,0,0,0.44);
 }
 	}
 }
-
-
-
-
-
-
-
 
 .social{
 	margin-bottom: 40px;
