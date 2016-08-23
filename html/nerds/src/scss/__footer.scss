@@ -1,0 +1,69 @@
+.page-footer{
+  font-family: 'Roboto', sans-serif;
+  margin-top: 77px;
+  padding-bottom: 77px;
+  
+    .inner-content{
+    width: 880px;
+    margin: 0 auto;
+    padding: 0 10px;
+    }
+  
+    .footer-wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    }
+    
+    .be-friends{
+    margin-left: 80px;
+
+      .footer__heading{
+      margin: 0;
+      margin-bottom: 10px;
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 36px;
+      color:#000000;
+      }
+      .footer__paragraph{
+      margin: 0;
+      font-size: 16px;
+      font-weight: 500;
+      color: #283136;
+      }
+    }
+ 
+  .social{
+  display: inline-flex;
+
+  .social__icons{
+  margin-right: 28px;
+  position: relative;
+  width: 61px;
+  height: 61px;
+  border-radius: 50%;
+  background-color: #e1e1e1;
+  cursor: pointer;
+    &:last-child{
+      margin:0;
+    }
+    &:hover{
+      background-color: #fb565a;
+    }
+    &:active{
+        background-color: #b63538;
+        box-shadow: 0px 3px 0px #9b2d30 inset;
+    }
+  }
+
+    .icon{
+    position: absolute;
+    color: #ffffff;
+    top: 22px;
+    left: 19px;
+
+    }
+  }
+}
