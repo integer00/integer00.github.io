@@ -4,15 +4,9 @@
 	<meta charset="UTF-8">
 	<title>Gllacy Shop</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
-
 	<link rel="stylesheet" href="css/style.css">
-	<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
-	
 </head>
 <body>
-
-
-
 
  <div class="page-header">
 
@@ -44,13 +38,11 @@
 
 					<li class="item__search">
 				
-
 					<svg class="item__search-svg" width="16.687" height="16.688" viewBox="0 0 20.062 19">
 						<path id="Лупа" class="cls-1" d="M931.155,40.747H930.4l-0.264-.261a6.212,6.212,0,1,0-.675.675l0.263,0.262v0.755l4.773,4.76,1.423-1.422Zm-5.731,0a4.291,4.291,0,1,1,4.3-4.291A4.294,4.294,0,0,1,925.424,40.747Z" transform="translate(-919.219 -30.25)"/></svg><span class="item__search-title">
 						<span class="search-dropdown"><input class="search-dropdown__input"type="text" placeholder="Что ищем?">
 						</span></li></span>
 
-	
 					<li class="item__login">
 						<svg class="item__login-svg"  width="20.062" height="19" viewBox="0 0 20.062 19">
 						<path d="M973,32.968v-0.96a3,3,0,0,1,3-3h11.059a3,3,0,0,1,3,3V44.986a3,3,0,0,1-3,3H976a3,3,0,0,1-3-3V44h2v2h13V31H975v1.968h-2Zm-3,8.046h6.029v2.743l7.027-5.3-7.027-5.3V35.9H970v5.114Z" transform="translate(-970 -29)"/></svg><span class="item__login-title">
@@ -93,6 +85,7 @@
 		<span class="basket-dropdown__button">Оформить заказ</span>
 			</div>
 	</div>
+
 						<svg class="item__basket-svg"  width="20.62" height="19.719" viewBox="0 0 20.062 19">
 						 <path class="item__svg--full" d="M1076.5,32.375h15.12l-1.37,10.25-12.63-.125Z" transform="translate(-1072 -29.031)"/>	 
   						 <path class="item__svg--empty" d="M1092.58,33.46l-1.21,8.912a2.025,2.025,0,0,1-1.88,1.635h-10.88a2.025,2.025,0,0,1-1.88-1.635l-1.47-10.287a3.738,3.738,0,0,1-.13-1.055H1073a1,1,0,0,1,0-2h4a0.992,0.992,0,0,1,.1,1.98h13.97C1092.17,31.01,1092.84,32.141,1092.58,33.46Zm-13.85,8.518-1.31-9h13.2l-0.03.2-1.18,8.788a0.033,0.033,0,0,0-.01.014h-10.67Zm0.52,3.009a1.874,1.874,0,1,1-1.88,1.874A1.874,1.874,0,0,1,1079.25,44.987Zm9,0a1.874,1.874,0,1,1-1.88,1.874A1.874,1.874,0,0,1,1088.25,44.987Z" transform="translate(-1072 -29.031)"/></svg><span class="item__basket-title">Пусто</span></li>
@@ -103,22 +96,25 @@
 	</div>
  </div>
 
-
 <div class="page-feature">
 
 	<div class="page-feature__inner">
 
-	<div class="page-feature__buttons-carousel"> 
-   			 <input class="carousel__btn-1" type="radio" name="toggle" id="c1" checked="checked" />
-						<label for="c1"><span></span></label>
-          <input class="carousel__btn-2" type="radio" name="toggle" id="c2"/>
-					<label for="c2"><span></span></label>
-    		<input class="carousel__btn-3" type="radio" name="toggle" id="c3"/>
-					<label for="c3"></label>
-    </div>
+	<div id="js-slider" class="page-feature__buttons-carousel"> 
+   			 
+   			 <input class="carousel__btn-1" type="radio" name="toggle" id="js-button-1" checked="checked" >
+				  <label for="js-button-1"></label>
+         
+         <input class="carousel__btn-2" type="radio" name="toggle" id="js-button-2">
+					<label for="js-button-2"></label>
+    		 
+    		 <input class="carousel__btn-3" type="radio" name="toggle" id="js-button-3">
+					<label for="js-button-3"></label>
 
-	<div class="page-feature-offer">
-      <h1 class="page-feature__heading">Крем-брюле и пломбир<br> с малиновым джемом</h1>
+   </div>
+
+	<div id="js-feature-offer" class="page-feature-offer">
+      <h1 id="js-feature-heading" class="page-feature__heading">Крем-брюле и пломбир<br> с малиновым джемом</h1>
       <span class="page-feature__button">Давайте оба!</span>
       </div>
 
@@ -129,7 +125,6 @@
 
   </div>
 </div>
-
 
 <div class="page-content">
 
@@ -260,12 +255,9 @@
 			<p class="content-mail__describe">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =) </p>
 					
 					<form class="form-mail" action="#">
-
-			<input class="form-mail__input" type="text" placeholder="Электронная почта">
-  			
-  			<input class="form-mail__button" type="submit" value="Отправить">
-		
-		</form>	
+						<input class="form-mail__input" type="text" placeholder="Электронная почта" required>
+		  			<input class="form-mail__button" type="submit" value="Отправить">
+					</form>	
 
 		</div>
 	</div>
@@ -282,7 +274,7 @@
 				<span class="text-feedback__span">Для заказов по телефону:</span>
 				<p class="text-feedback__parapraph"><strong class="text-feedback--strong">8 812 450-25-25</strong></p>
 				<span class="text-feedback__span">(с 10 до 20 ежедневно)</span>
-				<button class="text-feedback__button">Форма обратной связи</button>
+				<button id="js-feedback" class="text-feedback__button">Форма обратной связи</button>
 			</div>
 		</div>
 
@@ -291,10 +283,7 @@
 
 </div>
 
-
-
 	<div class="page-footer">
-
 
 		<div class="page-content__inner">
 				
@@ -333,30 +322,42 @@
 		<div class="inner">
 			
 			<div class="contacts__block">
-				<span class="block__item"><img class="block__hearth" src="img/hearth.svg" width="15" height="13" alt="<3"><a class="link item__text" href="#"><strong class="contacts--strong">Для поставщиков</strong></a></span>
-				<span class="block__item"><a class="link item__text" href="#">О производстве</a></span>
+				<span class="block__item">
+				<img class="block__hearth" src="img/hearth.svg" width="15" height="13" alt="<3">
+				<a class="link item__text" href="#"><strong class="contacts--strong">Для поставщиков</strong>
+				</a>
+				</span>
+
+				<span class="block__item">
+				<a class="link item__text" href="#">О производстве</a>
+
+				</span>
 			</div>
 
 			<div class="contacts__block">
-				<span class="block__item"><a class="link item__text" href="#">Наши документы</a></span>
-				<span class="block__item"><a class="link item__text" href="#">Экологические стандарты</a></span>
+				<span class="block__item">
+				<a class="link item__text" href="#">Наши документы</a>
+				</span>
+
+				<span class="block__item">
+				<a class="link item__text" href="#">Экологические стандарты</a>
+				</span>
 			</div>
 
 		</div>
 		</div>
 
 		<div class="copyright">
-			<a class="copyright__logo" href=""><img class="copyright__img" src="img/Copyright.svg" alt="">html Academy</a>
+			<a class="copyright__logo" href="">
+			<img class="copyright__img" src="img/Copyright.svg" alt="">html Academy</a>
 			<p class="copyright__text">Сделано в <a class="link copyright__link" href="#">HTML Academy</a> © 2016</p>
 		</div>
 
 </div>
-		
-<div class="modal-overlay"></div>
 
-<div class="modal-feedback ">
+<div id="js-modal" class="modal-feedback ">
 	<h1 class="feedback__heading">Мы обязательно вам ответим!</h1>
-		<div class="modal__close"></div>
+		<div id="js-modal__close" class="modal__close"></div>
 			<form class="feedback-form" action="#">
 				<input required class="feedback__input" type="text" placeholder="Как вас зовут?">
 				<input required class="feedback__input" type="text" placeholder="Ваша почта для ответа?">
@@ -365,9 +366,10 @@
 			</form>
 </div>
 
- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-<script src="js/main.js"></script>
+<div id="js-overlay" class="modal-overlay"></div>
 
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script src="js/main.js"></script>
 
 </body>
 
