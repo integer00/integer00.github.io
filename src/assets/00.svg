@@ -1,0 +1,65 @@
+<svg width="96.37109375px" height="122px" xmlns="http://www.w3.org/2000/svg" viewBox="201.814453125 14 96.37109375 122" style="background: rgba(0, 0, 0, 0);" preserveAspectRatio="xMidYMid"><defs>
+  <filter id="editing-scratch" x="-100%" y="-100%" width="300%" height="300%">
+    <!-- COLOR -->
+    <feFlood flood-color="#ddd" flood-opacity="0.75" result="COLOR-blu"></feFlood>
+    <feFlood flood-color="#666" flood-opacity="0.4" result="COLOR-red"></feFlood>
+    <!-- COLOR END -->
+
+    <!-- Texture -->
+    <feTurbulence baseFrequency=".05" type="fractalNoise" numOctaves="3" seed="0" result="Texture_10"></feTurbulence>
+    <feColorMatrix type="matrix" values="0 0 0 0 0,
+    0 0 0 0 0,
+    0 0 0 0 0,
+    0 0 0 -2.1 1.1" in="Texture_10" result="Texture_20"></feColorMatrix>
+
+    <feColorMatrix result="Texture_30" type="matrix" values="0 0 0 0 0,
+    0 0 0 0 0,
+    0 0 0 0 0,
+    0 0 0 -1.7 1.8" in="Texture_10"></feColorMatrix>
+    <!-- Texture -->
+
+    <!-- FILL -->
+    <feOffset dx="-3" dy="4" in="SourceAlpha" result="FILL_10"></feOffset>
+    <feDisplacementMap scale="17" in="FILL_10" in2="Texture_10" result="FILL_20"></feDisplacementMap>
+    <feComposite operator="in" in="Texture_30" in2="FILL_20" result="FILL_40"></feComposite>
+    <feComposite operator="in" in="COLOR-blu" in2="FILL_40" result="FILL_50"></feComposite>
+    <!-- FILL END-->
+
+    <!-- OUTLINE -->
+    <feMorphology operator="dilate" radius="3" in="SourceGraphic" result="OUTLINE_10"></feMorphology>
+    <feComposite operator="out" in="OUTLINE_10" in2="SourceGraphic" result="OUTLINE_20"></feComposite>
+    <feDisplacementMap scale="7" in="OUTLINE_20" in2="Texture_10" result="OUTLINE_30"></feDisplacementMap>
+    <feComposite operator="arithmetic" k2="-1" k3="1" in="Texture_20" in2="OUTLINE_30" result="OUTLINE_40"></feComposite>
+    <!-- OUTLINE END-->
+
+    <!-- BEVEL OUTLINE -->
+    <feConvolveMatrix order="8,8" divisor="1" kernelMatrix="1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 " in="SourceGraphic" result="BEVEL_10"></feConvolveMatrix>
+    <feMorphology operator="dilate" radius="2" in="BEVEL_10" result="BEVEL_20"></feMorphology>
+    <feComposite operator="out" in="BEVEL_20" in2="BEVEL_10" result="BEVEL_30"></feComposite>
+    <feDisplacementMap scale="7" in="BEVEL_30" in2="Texture_10" result="BEVEL_40"></feDisplacementMap>
+    <feComposite operator="arithmetic" k2="-1" k3="1" in="Texture_20" in2="BEVEL_40" result="BEVEL_50"></feComposite>
+    <feOffset dx="-7" dy="-7" in="BEVEL_50" result="BEVEL_60"></feOffset>
+    <feComposite operator="out" in="BEVEL_60" in2="OUTLINE_10" result="BEVEL_70"></feComposite>
+    <!-- BEVEL OUTLINE END -->
+
+    <!-- BEVEL FILL -->
+    <feOffset dx="-9" dy="-9" in="BEVEL_10" result="BEVEL-FILL_10"></feOffset>
+    <feComposite operator="out" in="BEVEL-FILL_10" in2="OUTLINE_10" result="BEVEL-FILL_20"></feComposite>
+    <feDisplacementMap scale="17" in="BEVEL-FILL_20" in2="Texture_10" result="BEVEL-FILL_30"></feDisplacementMap>
+    <feComposite operator="in" in="COLOR-red" in2="BEVEL-FILL_30" result="BEVEL-FILL_50"></feComposite> <!-- -->
+    <!-- BEVEL FILL END-->
+
+    <feMerge result="merge2">
+     <feMergeNode in="BEVEL-FILL_50"></feMergeNode>
+     <feMergeNode in="BEVEL_70"></feMergeNode>
+     <feMergeNode in="FILL_50"></feMergeNode>
+      <feMergeNode in="OUTLINE_40"></feMergeNode>
+    </feMerge>
+  </filter>
+</defs>
+<g filter="url(#editing-scratch)"><g transform="translate(221.92498683929443, 91.73000144958496)"><path d="M14.15-3.14L14.15-3.14L14.15-3.14Q16.69-3.14 17.88-3.98L17.88-3.98L17.88-3.98Q18.53-4.42 19.00-4.90L19.00-4.90L19.00-4.90Q20.60-6.49 20.60-12.35L20.60-12.35L20.60-18.69L20.60-18.69Q20.60-22.64 20.28-24.30L20.28-24.30L20.28-24.30Q19.36-29.33 14.53-29.33L14.53-29.33L14.53-29.33Q10.35-29.33 8.89-26.77L8.89-26.77L8.89-26.77Q8.00-25.20 7.75-23.21L7.75-23.21L7.75-23.21Q7.50-21.23 7.50-18.33L7.50-18.33L7.50-13.90L7.50-13.90Q7.50-9.10 8.18-7.10L8.18-7.10L8.18-7.10Q9.52-3.14 14.15-3.14ZM19.82-0.63L19.82-0.63L19.82-0.63Q18.78-0.13 17.36 0.18L17.36 0.18L17.36 0.18Q15.95 0.49 13.96 0.49L13.96 0.49L13.96 0.49Q11.97 0.49 10.20 0L10.20 0L10.20 0Q6.76-0.97 5.24-3.25L5.24-3.25L5.24-3.25Q3.73-5.53 3.35-8.22L3.35-8.22L3.35-8.22Q2.96-10.92 2.96-14.29L2.96-14.29L2.96-17.74L2.96-17.74Q2.96-22.46 3.32-24.10L3.32-24.10L3.32-24.10Q4.09-27.51 5.05-28.91L5.05-28.91L5.05-28.91Q7.88-32.97 13.66-32.97L13.66-32.97L13.66-32.97Q20.53-32.97 22.91-29.00L22.91-29.00L22.91-29.00Q24.37-26.59 24.74-23.83L24.74-23.83L24.74-23.83Q25.11-21.07 25.11-17.45L25.11-17.45L25.11-14.60L25.11-14.60Q25.11-10.06 24.76-8.40L24.76-8.40L24.76-8.40Q24.42-6.74 24.02-5.57L24.02-5.57L24.02-5.57Q23.63-4.40 23.08-3.58L23.08-3.58L23.08-3.58Q22.53-2.76 21.70-1.94L21.70-1.94L21.70-1.94Q20.87-1.12 19.82-0.63ZM42.23-3.14L42.23-3.14L42.23-3.14Q44.76-3.14 45.96-3.98L45.96-3.98L45.96-3.98Q46.61-4.42 47.08-4.90L47.08-4.90L47.08-4.90Q48.67-6.49 48.67-12.35L48.67-12.35L48.67-18.69L48.67-18.69Q48.67-22.64 48.36-24.30L48.36-24.30L48.36-24.30Q47.44-29.33 42.61-29.33L42.61-29.33L42.61-29.33Q38.43-29.33 36.97-26.77L36.97-26.77L36.97-26.77Q36.07-25.20 35.83-23.21L35.83-23.21L35.83-23.21Q35.58-21.23 35.58-18.33L35.58-18.33L35.58-13.90L35.58-13.90Q35.58-9.10 36.25-7.10L36.25-7.10L36.25-7.10Q37.60-3.14 42.23-3.14ZM47.90-0.63L47.90-0.63L47.90-0.63Q46.85-0.13 45.44 0.18L45.44 0.18L45.44 0.18Q44.02 0.49 42.04 0.49L42.04 0.49L42.04 0.49Q40.05 0.49 38.27 0L38.27 0L38.27 0Q34.84-0.97 33.32-3.25L33.32-3.25L33.32-3.25Q31.80-5.53 31.42-8.22L31.42-8.22L31.42-8.22Q31.04-10.92 31.04-14.29L31.04-14.29L31.04-17.74L31.04-17.74Q31.04-22.46 31.40-24.10L31.40-24.10L31.40-24.10Q32.16-27.51 33.13-28.91L33.13-28.91L33.13-28.91Q35.96-32.97 41.73-32.97L41.73-32.97L41.73-32.97Q48.61-32.97 50.99-29.00L50.99-29.00L50.99-29.00Q52.45-26.59 52.82-23.83L52.82-23.83L52.82-23.83Q53.19-21.07 53.19-17.45L53.19-17.45L53.19-14.60L53.19-14.60Q53.19-10.06 52.84-8.40L52.84-8.40L52.84-8.40Q52.49-6.74 52.10-5.57L52.10-5.57L52.10-5.57Q51.71-4.40 51.15-3.58L51.15-3.58L51.15-3.58Q50.60-2.76 49.77-1.94L49.77-1.94L49.77-1.94Q48.94-1.12 47.90-0.63Z" fill="#000"></path></g></g><style>text {
+  font-size: 64px;
+  font-family: Arial Black;
+  dominant-baseline: central;
+  text-anchor: middle;
+}</style></svg>
