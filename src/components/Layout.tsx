@@ -18,7 +18,7 @@ const Layout = () => {
                         <img className="w-16 rounded-xl" src={Photo} width={64} height={72} alt="photo"/>
                         <div>
                         <h3 className="">Kirill Dmitriev</h3>
-                        <p className="font-light text-[10px] text-[#aeb0b8] pt-1">SRE | Devops | SWE</p>
+                        <p className="font-light text-[10px] text-[#aeb0b8] pt-1">SRE | Devops Engineer</p>
                         </div>
                     </div>
 
@@ -60,8 +60,8 @@ const Layout = () => {
                 </div>
             </div>
 
-            <footer className="w-full p-5 border-t border-t-gray-600 text-white ">
-                {/* <h1>2023</h1> */}
+            <footer className="w-full p-2 border-t border-t-gray-600 text-white text-right ">
+                <p className="text-[10px] text-gray-600">kirill dmitriev 2023</p>
             </footer>
 
         </div>
