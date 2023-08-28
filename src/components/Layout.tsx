@@ -22,23 +22,23 @@ const Layout = () => {
                         </div>
                     </div>
 
-                    <ul className="flex flex-col py-4 border-b border-b-gray-600 text-[#aeb0b8] text-sm">
+                    <ul className="flex flex-col py-4 border-b border-b-gray-600 text-[#aeb0b8] text-xs">
                         <li className="flex pb-2 justify-start space-x-2">
-                            <FaRegFilePdf size={20} /> 
-                            <a href="https://github.com/integer00" target="_blank">CV</a>
-                        </li>        
-                        <li className="flex pb-2 justify-start space-x-2">
-                            <FaLinkedin size={20}/>
+                            <FaLinkedin size={16}/>
                             <a href="https://linkedin.com/in/kidmitriev/" target="_blank">kidmitriev</a>
                         </li>
                         <li className="flex pb-2 justify-start space-x-2">
-                            <FaEnvelopeOpenText size={20} />                                
+                            <FaEnvelopeOpenText size={16} />                                
                             <a href="mailto:kiryxa00@gmail.com">kiryxa00@gmail.com</a>
                         </li>
-                        <li className="flex justify-start space-x-2">
-                            <FaGithub size={20} />
+                        <li className="flex pb-2 justify-start space-x-2">
+                            <FaGithub size={16} />
                             <a href="https://github.com/integer00" target="_blank">integer00</a>
                         </li>
+                        <li className="flex justify-start space-x-2">
+                            <FaRegFilePdf size={16} /> 
+                            <a href="https://linkedin.com/in/kidmitriev/" target="_blank">CV</a>
+                        </li>        
                     </ul>
 
                     {/* maybe projects block in side bar */}
